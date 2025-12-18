@@ -1,0 +1,25 @@
+.lost-and-found-form {
+  margin: 80px auto;
+  max-width: 560px;
+}
+
+#itemdescription {
+  min-height: 110px;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: #0b1224;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 10px 30px rgba(106, 230, 193, 0.3);
+}
+
+.submit-button:hover {
+  transform: translateY(-1px);
+}

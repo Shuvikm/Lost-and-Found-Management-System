@@ -1,0 +1,310 @@
+/* Layout shell */
+.page-shell {
+  width: min(1200px, 95vw);
+  margin: 0 auto;
+  padding: 32px 0 64px;
+}
+
+/* Panels & cards */
+.card {
+  background: rgba(17, 24, 39, 0.92);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(8px);
+}
+
+/* Status pills */
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(245, 200, 66, 0.14);
+  color: var(--text);
+  border: 1px solid var(--border);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.pill.lost { background: #ef4444; color: #0b0d12; }
+.pill.found { background: #22c55e; color: #0b0d12; }
+.pill.claimed { background: #f59e0b; color: #0b0d12; }
+
+/* Buttons */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 18px;
+  border-radius: 10px;
+  border: 1px solid rgba(245, 200, 66, 0.35);
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: #0b0d12;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  box-shadow: 0 0 18px rgba(245, 200, 66, 0.45);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 0 24px rgba(245, 200, 66, 0.55);
+}
+
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 16px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text);
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  transition: border-color 0.2s ease, background 0.2s ease, color 0.2s ease;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.btn-ghost:hover {
+  background: rgba(245, 200, 66, 0.06);
+  border-color: rgba(245, 200, 66, 0.4);
+  color: var(--text);
+}
+
+.form-shell {
+  max-width: 480px;
+  margin: 60px auto;
+}
+
+.form-shell h2 {
+  margin: 0 0 10px;
+  color: var(--text);
+}
+
+.form-shell p {
+  margin: 0 0 22px;
+  color: var(--muted);
+}
+
+.form-group {
+  margin: 14px 0;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid #1f2937;
+  background: #0f1624;
+  color: var(--text);
+  outline: none;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: rgba(245, 200, 66, 0.6);
+  box-shadow: 0 0 0 2px rgba(245, 200, 66, 0.25);
+}
+
+.signin-container,
+.signup-card,
+.lost-and-found-form {
+  width: 100%;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 34px;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(10px);
+  text-align: left;
+}
+
+.signin-container h2,
+.signup-card h2,
+.lost-and-found-form h2 {
+  margin: 0 0 10px;
+}
+
+.signin-container small,
+.signup-card small,
+.lost-and-found-form small {
+  color: var(--muted);
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 10;
+  padding: 20px;
+}
+
+.modal-content {
+  background: rgba(17, 24, 39, 0.95);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px;
+  width: min(520px, 95vw);
+  box-shadow: var(--shadow);
+}
+
+.modal .close {
+  float: right;
+  font-size: 24px;
+  cursor: pointer;
+  color: var(--muted);
+}
+
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+}
+
+.stat-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 14px;
+}
+
+/* Manga-inspired chapter headers (subtle) */
+.chapter-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 800;
+  letter-spacing: 0.6px;
+}
+.chapter-title::before {
+  content: "CHAPTER";
+  font-size: 11px;
+  color: var(--muted);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 4px 8px;
+}
+.chapter-title::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, var(--border), transparent);
+}
+
+/* Item grid & card */
+.item-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.item-card {
+  background: rgba(17, 24, 39, 0.9);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.item-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 52px rgba(0, 0, 0, 0.55);
+}
+.item-card .media {
+  aspect-ratio: 16 / 10;
+  width: 100%;
+  object-fit: cover;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.4), transparent);
+}
+.item-card .body {
+  padding: 14px;
+}
+.item-card .meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+  color: var(--muted);
+}
+.tag {
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+/* Filter bar */
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  margin: 10px 0 16px;
+}
+.filter-bar input,
+.filter-bar select {
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.02);
+  color: var(--text);
+}
+.filter-bar .actions {
+  margin-left: auto;
+  display: flex;
+  gap: 10px;
+}
+
+/* Animations: reveal on scroll */
+.reveal {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 400ms ease, transform 400ms ease;
+}
+.reveal.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 767px) {
+  .page-shell {
+    padding: 20px 0 48px;
+  }
+
+  .signin-container,
+  .signup-card,
+  .lost-and-found-form {
+    padding: 24px;
+  }
+}
