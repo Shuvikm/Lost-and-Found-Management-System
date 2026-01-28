@@ -23,7 +23,7 @@ A full-stack MERN (MongoDB, Express.js, React, Node.js) application for managing
 │
 ├── server/                 # Node.js Backend
 │   ├── config/             # Database configuration
-│   ├── middleware/         # Auth & validation middleware
+│   ├── middleware/         # AUTH & validation middleware
 │   ├── models/             # Mongoose schemas
 │   ├── routes/             # API controllers
 │   ├── scripts/            # Test & seed scripts
